@@ -42,10 +42,16 @@ footer {
   border-radius: 10px;
   width: 300px;
   height: 80%;
-  display: none;
+  display: flex;
   flex-direction: column;
   box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.418);
   transition: all 1.5s ease;
+  overflow-y: auto;
+}
+
+#loja::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 .card {
@@ -129,7 +135,10 @@ footer {
   padding: 5px;
   border-radius: 5px;
   font-size: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
 }
 
 .bt:hover {
