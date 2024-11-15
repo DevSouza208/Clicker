@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clicker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1 id="pontos">0🔶</h1></header>
+    <main onclick="clique(); audio_center()">🍔</main>
+    <footer><h4>@DevSouza</h4></footer>
+    <input type="button" id="a_loja" value="Loja" onclick="abrir_loja()" />
+    <div id="loja">
+      <div id="Hamburguer" class="card on" onclick="comprar('Hamburguer')">
+        <div class="item">🍔</div>
+        <div class="descrição">
+          <div class="valor">Hamburguer</div>
+          <div class="uso">Venda por 1🔶</div>
+        </div>
+      </div>
+      <div id="Pizza" class="card off" class="off" onclick="comprar('Pizza')">
+        <div class="item">🍕</div>
+        <div class="descrição">
+          <div class="valor">Pizza - 50🔶</div>
+          <div class="uso">Venda por 2🔶</div>
+        </div>
+      </div>
+      <div id="Bolo" class="card off" class="off" onclick="comprar('Bolo')">
+        <div class="item">🍰</div>
+        <div class="descrição">
+          <div class="valor">Bolo - 150🔶</div>
+          <div class="uso">Venda por 5🔶</div>
+        </div>
+      </div>
+      <div id="Torta" class="card off" class="off" onclick="comprar('Torta')">
+        <div class="item">🥧</div>
+        <div class="descrição">
+          <div class="valor">Torta - 500🔶</div>
+          <div class="uso">Venda por 10🔶</div>
+        </div>
+      </div>
+      <div id="Taco" class="card off" class="off" onclick="comprar('Taco')">
+        <div class="item">🌮</div>
+        <div class="descrição">
+          <div class="valor">Taco - 1000🔶</div>
+          <div class="uso">Venda por 20🔶</div>
+        </div>
+      </div>
+      <input type="button" class="bt" value="❌" onclick="fechar_loja()" />
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <audio id="click_center" src="audio/click_center.ogg" preload="auto"></audio>
+  <audio id="click_menu" src="audio/click_menu.ogg" preload="auto"></audio>
+  <audio id="click_compra" src="audio/comprou.mp3" preload="auto"></audio>
+  <audio id="not" src="audio/not.ogg" preload="auto"></audio>
+</html>
